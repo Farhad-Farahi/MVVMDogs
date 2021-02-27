@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dogDetailFragment"
+            type="com.fd.mvvmdogs.model.DogBreedModel" />
+        <variable
+            name="palette"
+            type="com.fd.mvvmdogs.model.DogPalette" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.DetailFragment"
+        android:background="@{palette.color}"
+        >
+
+        <ImageView
+            android:id="@+id/ivDogImage_FragmentDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="6dp"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter"
+            tools:src="@mipmap/ic_dog_icon"
+            android:imageUrl="@{dogDetailFragment.imageUrl}"
+            />
+
+        <TextView
+            android:id="@+id/tvDogName_FragmentDetail"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDogImage_FragmentDetail"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            tools:text="Dog Breed"
+            android:text="@{dogDetailFragment.dogBreed}"/>
+
+        <TextView
+            android:id="@+id/tvDogPurpose_FragmentDetail"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDogName_FragmentDetail"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            tools:text="Bred For"
+            android:text="@{dogDetailFragment.bredFor}"
+            />
+
+        <TextView
+            android:id="@+id/tvDogTemperament_FragmentDetail"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDogPurpose_FragmentDetail"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            tools:text="Temperament"
+            android:text="@{dogDetailFragment.temperament}"
+            />
+
+        <TextView
+            android:id="@+id/tvDogLifeSpan_FragmentDetail"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDogTemperament_FragmentDetail"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            tools:text="life Span"
+            android:text="@{dogDetailFragment.lifeSpan}"
+            />
+
+
+    </RelativeLayout>
+
+</layout>

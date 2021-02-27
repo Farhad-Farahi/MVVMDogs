@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dog"
+            type="com.fd.mvvmdogs.model.DogBreedModel" />
+        <variable
+            name="listener"
+            type="com.fd.mvvmdogs.listener.DogClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:orientation="horizontal"
+        android:onClick="@{listener::onDogClicked}"
+        android:layout_margin="4dp"
+        >
+        <TextView
+            android:id="@+id/dogId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@{String.valueOf(dog.uuid)}"
+            />
+
+        <ImageView
+            android:id="@+id/iv_ItemDog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="4dp"
+            tools:src="@mipmap/ic_dog_icon"
+            android:imageUrl="@{dog.imageUrl}"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title"
+                tools:text="Name"
+                android:text="@{dog.dogBreed}"
+                />
+            <TextView
+                android:id="@+id/tvLifeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text"
+                tools:text="Life Span"
+                android:text="@{dog.lifeSpan}"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>
