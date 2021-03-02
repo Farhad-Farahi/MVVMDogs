@@ -8,9 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.fd.mvvmdogs.R
 
-/**
- *   Glide will handle the thread that we load image and will cache it after first time we downloaded from api
- */
+
 
 //function that will give us a little spinner that we can display on the image while we are waiting for it to be downloaded
 fun getProgressDrawable(context: Context) : CircularProgressDrawable{

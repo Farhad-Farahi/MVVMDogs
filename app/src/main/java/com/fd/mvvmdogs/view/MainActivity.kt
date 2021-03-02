@@ -17,9 +17,7 @@ import com.fd.mvvmdogs.view.fragment.DetailFragment
 import com.fd.mvvmdogs.view.fragment.ListFragment
 
 
-/**
- * kotlin allow us to add parameters or methods to classes that we dont own with ktx wow
- */
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

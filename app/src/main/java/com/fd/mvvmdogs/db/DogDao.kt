@@ -9,9 +9,7 @@ import com.fd.mvvmdogs.model.DogBreedModel
 interface DogDao {
 
 
-    //var arg means that its basically shorthand for variable arguments or multiple arguments
-    //so we can pass this function as many object of DogBreedModel as we like
-    //list<Long> = list from ids so the size of this list is the size of the dogs  we provide here
+
     @Insert
     suspend fun insertAll(vararg dog : DogBreedModel):List<Long>
 

@@ -7,9 +7,7 @@ import com.google.gson.annotations.SerializedName
 
 @Entity
 data class DogBreedModel(
-    /**
-     * if the name we define is the same name of value name in json it don't need  @SerializedName
-     */
+
     @ColumnInfo(name = "breed_id")
     @SerializedName("id")
     val breedId: String?,
